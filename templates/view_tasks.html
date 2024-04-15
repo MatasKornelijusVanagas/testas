@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <h2>View Tasks</h2>
+    <ul>
+        {% for task in tasks %}
+        <li>{{ task.title }} - {{ task.status }} - Assigned to: {{ task.user }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

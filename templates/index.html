@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <h2>Tasks List</h2>
+    <a href="/task/add">Add Task</a>
+    <ul>
+        {% for task in tasks %}
+        <li>
+            {{ task.title }} - {{ task.status }}
+            <a href="/task/edit/{{ task.id }}">Edit</a>
+            <a href="/task/delete/{{ task.id }}" onclick="return confirm('Are you sure?');">Delete</a>
+        </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

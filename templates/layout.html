@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .navbar {
+            background-color: #0056b3;
+            padding: 15px 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+        }
+        .container {
+            padding: 40px;
+            max-width: 800px;
+            margin: auto;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        input, select, button {
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100%;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .button-dotted {
+            border-style: dotted; /* Dotted border style */
+            border-color: #007BFF; /* Blue border color */
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="/">Task Manager</a>
+    </div>
+    <div class="container">
+        {% block content %}
+            <!-- Example usage of button blocks with dot borders -->
+            <button type="button" class="button-dotted">Edit</button>
+            <button type="button" class="button-dotted">Delete</button>
+        {% endblock %}
+    </div>
+</body>
+</html>
+
